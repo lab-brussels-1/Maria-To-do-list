@@ -11,10 +11,11 @@
 <body>
     <div class="wrapper">
         <header>Todo App</header>
-        <div class="inputField">
-            <input type="text" placeholder="Add your new todo">
-            <button><i class="fas fa-plus"></i></button>
-        </div>
+        <form class="inputField">
+            <input type="text" id="userInput" placeholder="Add your new todo" required
+                minlength="2" maxlength="8">
+            <button id="submitBtn"><i class="fas fa-plus"></i></button>
+        </form>
         <ul class="todoList">
             <li>Organize Evan Birthday party <span><i class="fas fa-trash"></i></span></li>
         </ul>
@@ -23,6 +24,6 @@
         <button>Clear all</button>   
         </div>
 
-    <script src="./src/init.js"></script>    
+    <script type= "module" src="./src/init.js"></script>    
 </body>
 </html>
