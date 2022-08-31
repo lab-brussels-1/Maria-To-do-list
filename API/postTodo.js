@@ -1,4 +1,4 @@
-export const postTodo = async (toDo) => {
+export const postTodo = async (todo) => {
     debugger;
   try {
     const res = await fetch(`http://localhost:5000/todos`, {
@@ -6,13 +6,12 @@ export const postTodo = async (toDo) => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ title: `${toDo}`, completed: false }),
+      body: JSON.stringify({ title: `${todo}`, completed: false }),
     });
 
     // CHECK RES
     if (res.status === 201) {
       const data = await res.json();
-
       return data
     } else {
       console.log(`Error while posting todo with status : ${res.status}`);

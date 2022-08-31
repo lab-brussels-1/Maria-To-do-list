@@ -1,17 +1,19 @@
+import { getTodoList } from "../../API/getTodos.js";
 import { postTodo } from "../../API/postTodo.js";
 import { validateUserInput } from "../logic/validateInput.js";
 
-
-export const addToDoHandler = (text) => {
+export const addToDoHandler = (userInput) => {
   debugger;
-  var userToDo = validateUserInput(text);
-  if (userToDo) postTodo(text)
-};
+  var userToDo = validateUserInput(userInput);
+  if (!userToDo) {
+    return;
+  } else {
+    postTodo(userInput)
+      .then((newToDo) => console.log(newToDo))
+      .catch((err) => console.error(err));
 
-// async () => {
-//   const response = await fetch(`http://localhost:5000/todos`);
-//   const data = await response.json();
-//   console.log(data);
-//   return data;
-// };
-// myTry();
+    getTodoList()
+      .then((toDoList) => console.log(toDoList))
+      .catch((err) => console.error(err));
+  }
+};
