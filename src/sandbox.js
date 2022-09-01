@@ -39,3 +39,26 @@
 //     const newli = `<li> ${us.title} <span><i class="fas fa-trash"></i></span></li>`
 //     toDoList.innerHTML=newli
 // }
+
+
+import { validateUserInput } from "../logic/validateInput.js";
+import { getTodoList } from "../../API/getTodos.js";
+// import { postTodo } from "../../API/postTodo.js";
+// import { displayList } from "../components/displayLi.js";
+
+// export const addToDoHandler = (userInput) => {
+//   var array = [];
+//   var userToDo = validateUserInput(userInput);
+//   if (!userToDo) {
+//     return;
+//   } else {
+//     // postTodo(userInput);
+//     getTodoList()
+//       .then((toDOList) => {
+//         debugger;
+//         array = toDOList;
+//       })
+//       .catch((err) => console.error(err));
+//   }
+//   console.log(array);
+// };
