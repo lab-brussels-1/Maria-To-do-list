@@ -1,16 +1,14 @@
-// import { TODO_CLASS } from "../data.js";
-
-// const ulEl = document.getElementsByTagName('ul');
-// export const displayList = (array) => {
-//     debugger;
-//     array.forEach(obj => {
-//         const newLi = document.createElement('li');
-//         newLi.innerHTML = `${obj.title} <span><i class="fas fa-trash"></i></span>`;
-//         ulEl.appendNodeChild(newLi)
-//   })
-// };
+import { TODO_CLASS } from "../data.js";
 
 
-export const jk = (list)=> {
-  console.log(list);
-}
+const todoList = document.querySelector(TODO_CLASS);
+export const displayList = (list) => {
+  debugger;
+  let newLitag = "";
+  list.forEach((element) => {
+    newLitag =
+      `<li> ${element.title}<span onclick="deleteTodo(${element.id})"; ><i>delete</i></span></li>` +
+      newLitag;
+  });
+  todoList.innerHTML = newLitag;
+};

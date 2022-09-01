@@ -1,7 +1,7 @@
 import { validateUserInput } from "../logic/validateInput.js";
 import { getTodoList } from "../../API/getTodos.js";
 import { postTodo } from "../../API/postTodo.js";
-import { jk } from "../components/displayLi.js";
+import { displayList } from "../components/displayLi.js";
 
 export const addToDoHandler = (userInput) => {
   debugger;
@@ -9,4 +9,4 @@ export const addToDoHandler = (userInput) => {
   if (!userToDo) { return }
   postTodo(userInput)
   }   
-getTodoList().then((toDOList) => jk(toDOList));
+getTodoList().then((toDOList) => displayList(toDOList));

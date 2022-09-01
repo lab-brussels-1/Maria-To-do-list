@@ -7,3 +7,4 @@ export const INPUT_BTN_ID ='submitBtn'
 
 // CLASSES
 export const TODO_CLASS = '.todoList'
+
