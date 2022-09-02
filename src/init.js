@@ -3,9 +3,9 @@ import "./listeners/addToDo.js";
 
 // const deleteTodo = async() => {
 //   try {
-//       const res = await fetch(`http://localhost:5000/todos/1`, {
-//       method: "DELETE",
-//     });
+//       const res = await fetch(`http://localhost:5000/todos`, {
+//         method: "DELETE",
+//       });
 
 //     // CHECK RES
 //     if (res.status === 200) {
