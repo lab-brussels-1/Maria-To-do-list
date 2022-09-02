@@ -1,7 +1,17 @@
-const myTry = async () => {
-  const response = await fetch(`http://localhost:5000/todos`);
-  const data = await response.json();
-  console.log(data);
-  return data;
-};
-myTry();
+import { validateUserInput } from "../logic/validateInput.js";
+import { getTodoList } from "../../API/getTodos.js";
+import { postTodo } from "../../API/postTodo.js";
+import { displayList } from "../components/displayLi.js";
+import { storage} from "../data.js";
+
+export const addToDoHandler = (userInput) => {
+  debugger;
+  var userToDo = validateUserInput(userInput);
+  if (!userToDo) { return }
+  postTodo(userInput)
+  }   
+getTodoList().then((toDoList) => {
+  storage.array = toDoList;
+  displayList(toDoList);
+})
+

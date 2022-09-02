@@ -58,7 +58,7 @@ padding: 25px;;
   max-height: 250px;
   overflow-y: auto;
 }
-.todoList li {
+.todoList li{
 list-style: none;
 height: 45px;
 line-height: 45px;

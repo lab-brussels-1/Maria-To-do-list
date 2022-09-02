@@ -11,18 +11,18 @@
 <body>
     <div class="wrapper">
         <header>Todo App</header>
-        <div class="inputField">
-            <input type="text" placeholder="Add your new todo">
-            <button><i class="fas fa-plus"></i></button>
-        </div>
+        <form class="inputField" >
+            <input type="text" id="userInput" placeholder="Add your new todo" required
+                minlength="2" maxlength="90">
+            <button id="submitBtn">+</button>
+        </form>
         <ul class="todoList">
-            <li>Organize Evan Birthday party <span><i class="fas fa-trash"></i></span></li>
         </ul>
         <div class="footer">
-        <span>You have 0 pending tasks</span>
-        <button>Clear all</button>   
+        <span id="num">You have 0 pending tasks</span>
+        <button id="deleteAll">Clear all</button>   
         </div>
-
-    <script src="./src/init.js"></script>    
+    <script type="module" src="./src/init.js"></script>
+    <script src="../../API/deleteToDo.js"></script>  
 </body>
 </html>
