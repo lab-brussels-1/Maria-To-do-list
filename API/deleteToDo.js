@@ -1,16 +1,11 @@
 const deleteTodo = async (id) => {
-  debugger;
   try {
-      const res = await fetch(
-        `https://my-json-server.typicode.com/lab-brussels-1/Maria-To-do-list/todos/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const res = await fetch(`http://localhost:5000/todos/${id}`, {
+        method: "DELETE",
+      });
 
     // CHECK RES
     if (res.status === 200) {
-      debugger;
       const data = await res.json();
 
       return data;
