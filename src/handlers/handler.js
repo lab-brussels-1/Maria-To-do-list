@@ -5,7 +5,6 @@ import { displayList } from "../components/displayLi.js";
 import { storage} from "../data.js";
 
 export const addToDoHandler = (userInput) => {
-  debugger;
   var userToDo = validateUserInput(userInput);
   if (!userToDo) { return }
   postTodo(userInput)
