@@ -4,7 +4,7 @@ export const getTodoList = async () => {
     debugger;
     // fetch the API data
     const res = await fetch(
-      `https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos`
+      `https://my-json-server.typicode.com/lab-brussels-1/Maria-To-do-list/todos`
     );
     //  throw an error if the response is not ok
     if (res.status === 200) {
