@@ -8,7 +8,7 @@ export const displayList = (list) => {
   let newLitag = "";
   list.forEach((element) => {
     newLitag =
-      `<li> ${element.title}<span onclick="deleteTodo(${element.id})"; ><i>DEL</i></span></li>` +
+      `<li> ${element.title}<span onclick="deleteTodo(${element.id})"; > - </span></li>` +
       newLitag;
   });
   todoList.innerHTML = newLitag;
