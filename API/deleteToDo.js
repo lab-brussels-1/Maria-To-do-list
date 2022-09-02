@@ -2,7 +2,7 @@ const deleteTodo = async (id) => {
   debugger;
   try {
       const res = await fetch(
-        `https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos/${id}`,
+        `https://my-json-server.typicode.com/lab-brussels-1/Maria-To-do-list/todos/${id}`,
         {
           method: "DELETE",
         }

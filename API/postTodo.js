@@ -2,7 +2,7 @@ export const postTodo = async (todo) => {
   try {
     debugger;
     const res = await fetch(
-      "https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos",
+      "https://my-json-server.typicode.com/lab-brussels-1/Maria-To-do-list/todos",
       {
         method: "POST",
         headers: {
