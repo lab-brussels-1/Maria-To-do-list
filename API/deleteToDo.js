@@ -3,9 +3,10 @@ const todoList = document.querySelector(".todoList");
 const numToDo = document.getElementById("num");
 
 const deleteTodo = async (id, event) => {
-  console.log(event.target.parentElement)
+  await deletion(id)
+    const toDoCount = todoList.children.length;
+    numToDo.innerHTML = `You have ${toDoCount} pending tasks`;
     event.target.parentElement.remove();
-   await deletion(id)
   }
 
 const deletion = async (id) => {
