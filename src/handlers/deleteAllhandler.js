@@ -1,3 +1,4 @@
+import { displayList } from "../components/displayLi.js";
 import { storage, TODO_CLASS } from "../data.js"
 
 const todoList = document.querySelector(TODO_CLASS);
