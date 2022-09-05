@@ -1,12 +1,14 @@
 import { storage } from "../data.js"
 
 
-export const deleteAll = () => {
+export const deleteAll = async () => {
   storage.array.forEach(element => {
       const id = element.id
-       deleteTodo(id)
+      deleteTodo(id).then((data) => console.log(data)); 
   })
-  .then((data)=>console.log(data))
+  console.log(storage.array)
+   return storage.array
+ 
 }
 const deleteTodo = async (id) => {
   try {
