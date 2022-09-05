@@ -5,7 +5,10 @@ const todoList = document.querySelector(TODO_CLASS);
 export const deleteAll =  () => {
   storage.array.forEach(element => {
       const id = element.id
-    deleteTodo(id).then(() => {  todoList.innerHTML = "";}); 
+    deleteTodo(id).then((toDoList) => {
+      storage.array = toDoList;
+      displayList(toDoList);
+    }); 
   })
 }
 const deleteTodo = async (id) => {
