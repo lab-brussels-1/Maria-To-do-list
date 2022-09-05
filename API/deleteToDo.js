@@ -2,15 +2,11 @@
 const todoList = document.querySelector(".todoList");
 const numToDo = document.getElementById("num");
 
-const deleteTodo = (id, event) => {
-  console.log(event.target)
-  debugger;
-  deletion(id, event).then((event) => {
-    console.log(event.target);
-    event.target.remove()
-  })
-}
-
+const deleteTodo = async (id, event) => {
+  console.log(event.target.parentElement)
+    event.target.parentElement.remove();
+   await deletion(id)
+  }
 
 const deletion = async (id) => {
   try {
