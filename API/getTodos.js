@@ -2,7 +2,8 @@
 export const getTodoList = async () => {
   try {
     // fetch the API data
-    const res = await fetch(`https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos`);
+    const res = await fetch(`https://lab-brussels-1.github.io/Maria-To-do-list/todos`
+    );
     //  throw an error if the response is not ok
     if (res.status === 200) {
       return await res.json();
