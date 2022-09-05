@@ -1,14 +1,12 @@
-import { storage } from "../data.js"
+import { storage, TODO_CLASS } from "../data.js"
 
+const todoList = document.querySelector(TODO_CLASS);
 
-export const deleteAll = async () => {
+export const deleteAll =  () => {
   storage.array.forEach(element => {
       const id = element.id
-      deleteTodo(id).then((data) => console.log(data)); 
+    deleteTodo(id).then(() => {  todoList.innerHTML = "";}); 
   })
-  console.log(storage.array)
-   return storage.array
- 
 }
 const deleteTodo = async (id) => {
   try {
