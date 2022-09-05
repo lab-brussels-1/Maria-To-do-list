@@ -1,5 +1,5 @@
-import { TODO_CLASS } from "../data.js";
-const todoList = document.querySelector(TODO_CLASS);
+
+const todoList = document.querySelector(".todoList");
 const numToDo = document.getElementById("num");
 
 const deleteTodo = (id, event) => {
