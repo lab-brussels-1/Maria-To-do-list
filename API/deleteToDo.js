@@ -3,7 +3,6 @@ const todoList = document.querySelector(".todoList");
 const numToDo = document.getElementById("num");
 
 const deleteTodo = async (id, event) => {
-  debugger;
   const toDoCount = todoList.children.length - 1;
   numToDo.innerHTML = `You have ${toDoCount} pending tasks`;
   event.target.parentElement.remove();
@@ -12,7 +11,7 @@ const deleteTodo = async (id, event) => {
 
 const deletion = async (id) => {
   try {
-    const res = await fetch(`https://lab-brussels-1.github.io/Maria-To-do-list/todos${id}`, {
+    const res = await fetch(`https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos/${id}`, {
       method: "DELETE",
     });
 
