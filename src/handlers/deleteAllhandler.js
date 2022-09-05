@@ -2,7 +2,6 @@ import { storage } from "../data.js"
 
 
 export const deleteAll = () => {
-
   storage.array.forEach(element => {
       const id = element.id
 

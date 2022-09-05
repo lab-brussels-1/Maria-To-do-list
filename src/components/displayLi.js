@@ -4,7 +4,6 @@ const numToDo = document.getElementById("num");
 export const displayList = (list) => {
   var toDocount= Object.keys(list).length;
   numToDo.innerHTML = `You have ${toDocount} pending tasks`;
-  debugger;
   let newLitag = "";
   list.forEach((element) => {
     newLitag =

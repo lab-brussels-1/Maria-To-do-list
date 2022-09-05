@@ -6,11 +6,15 @@ import { storage} from "../data.js";
 
 export const addToDoHandler = (userInput) => {
   var userToDo = validateUserInput(userInput);
-  if (!userToDo) { return }
-  postTodo(userInput)
-  }   
-getTodoList().then((toDoList) => {
-  storage.array = toDoList;
-  displayList(toDoList);
-})
+  if (!userToDo) {
+    return;
+  }
+  postTodo(userInput).then(
+    getTodoList().then((toDoList) => {
+      storage.array = toDoList;
+      displayList(toDoList);
+    })
+  );
+};
+
 
