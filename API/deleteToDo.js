@@ -6,9 +6,7 @@ const deleteTodo = async (id) => {
 
     // CHECK RES
     if (res.status === 200) {
-      const data = await res.json();
-
-      return data;
+    return await res.json();
     } else {
       console.log(`Error while deleting todo with status : ${res.status}`);
       return false;
