@@ -14,7 +14,7 @@ export const deleteAll =  () => {
 }
 const deleteTodo = async (id) => {
   try {
-    const res = await fetch(`http://localhost:5000/todos/${id}`, {
+    const res = await fetch(`https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos/${id}`, {
       method: "DELETE",
     });
 
