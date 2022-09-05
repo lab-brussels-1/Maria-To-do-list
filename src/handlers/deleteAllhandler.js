@@ -5,7 +5,7 @@ export const deleteAll = () => {
   storage.array.forEach(element => {
       const id = element.id
 
-       deleteTodo(id).then((data)=>console.log)
+       deleteTodo(id).then((data)=>console.log(data))
   });
     
 }
@@ -17,9 +17,9 @@ const deleteTodo = async (id) => {
 
     // CHECK RES
     if (res.status === 200) {
-      const data = await res.json();
+      return await res.json();
 
-      return data;
+     
     } else {
       console.log(`Error while deleting todo with status : ${res.status}`);
       return false;
