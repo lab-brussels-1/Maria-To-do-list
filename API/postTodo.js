@@ -1,6 +1,6 @@
 export const postTodo = async (todo) => {
   try {
-    const res = await fetch(`https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos/${id}`, {
+    const res = await fetch(`https://my-json-server.typicode.com/MMikhailova/Maria-To-do-list/todos`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
