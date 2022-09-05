@@ -7,7 +7,7 @@ export const displayList = (list) => {
   if (toDocount !== 0) {
     list.forEach((element) => {
       newLitag =
-        `<li> ${element.title}<span onclick="deleteTodo(${element.id})"; > - </span></li>` +
+        `<li> ${element.title}<span onclick="deleteTodo(${element.id},event)"; > - </span></li>` +
         newLitag;
     });
   }
