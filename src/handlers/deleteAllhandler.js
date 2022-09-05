@@ -5,7 +5,7 @@ export const deleteAll = () => {
   storage.array.forEach(element => {
       const id = element.id
 
-       deleteTodo(id)
+       deleteTodo(id).then((data)=>console.log)
   });
     
 }
